@@ -1,2 +1,5 @@
-# kingzhang.github.io
-blog
+# 个人博客
+
+
+[kingzhang.com](kingzhang.com)
+
