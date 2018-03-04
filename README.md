@@ -1,5 +1,5 @@
 # 个人博客
 
 
-[kingzhang.com](kingzhang.com)
+[kingzhang.com](www.kingzhang.com)
 
