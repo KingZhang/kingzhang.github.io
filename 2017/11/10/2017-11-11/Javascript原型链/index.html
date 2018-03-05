@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://kingzhang.github.io/2017/11/10/2017-11-11/Javascript原型链/prototype1.jpg">
 <meta property="og:image" content="https://kingzhang.github.io/2017/11/10/2017-11-11/Javascript原型链/prototype2.jpg">
 <meta property="og:image" content="https://kingzhang.github.io/2017/11/10/2017-11-11/Javascript原型链/prototype3.jpg">
-<meta property="og:updated_time" content="2018-03-04T10:52:43.381Z">
+<meta property="og:updated_time" content="2018-03-04T15:24:49.423Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript原型链">
 <meta name="twitter:description" content="原型链的关系在Javascript中，只要创建了一个新函数，就会为该函数创建prototype属性，指向函数的原型对象，Object.prototype是所有对象最顶层的原型。所有对象都继承由Object构造函数创建的原型对象，也就是说，所有的原型对象都继承Object.prototype的属性，而这个原型对象默认有一个constructor属性指向Object构造方法的原型。 默认所有原型对象都">
@@ -174,6 +174,7 @@ ga('send', 'pageview');
       
         <h2 id="原型链的关系"><a href="#原型链的关系" class="headerlink" title="原型链的关系"></a>原型链的关系</h2><p>在Javascript中，只要创建了一个新函数，就会为该函数创建prototype属性，指向函数的原型对象，<strong>Object.prototype是所有对象最顶层的原型</strong>。所有对象都继承由Object构造函数创建的原型对象，也就是说，所有的原型对象都继承Object.prototype的属性，而这个原型对象默认有一个constructor属性指向Object构造方法的原型。</p>
 <p><strong>默认所有原型对象都会有constructor属性，这个属性包含一个指向prototype属性所在函数的指针。通过构造函数创建实例后，每个实例内部都有一个指针指向函数的prototype对象</strong>。Firefox，safari，Chrome中这个指针是<strong>proto</strong>，可以通过脚本访问。但是在IE中这个属性是不可见的，所以无法在IE中修改<strong>proto</strong>。同时，这个属性的关联关系是在实例与构造函数的prototope对象之间，而不是实例跟构造函数之间。</p>
+<a id="more"></a>
 <p>事实上，虽然IE无法访问内部的<strong>proto</strong> 属性，但是通过以下方法可以确定在IE中有这样的隐式关系：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Person.prototype.isPrototypeOf(person1)</span><br></pre></td></tr></table></figure>
 <p>如果内部有一个指向Person.prototype 的指针，那么就会返回true。</p>

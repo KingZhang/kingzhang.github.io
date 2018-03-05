@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="水煮前端">
 <meta property="og:description" content="闭包是ECMAScript一个很重要的特征，但是却很难用合适的定义来描述它。虽然闭包很难清晰地描述，但是，却很容易创建，或者说，不小心创建。然而，闭包的存在其实是有一定的潜在问题的。为了避免“不小心”地创建闭包，以及更好地利用闭包的优点，有必要理解闭包的机制。 闭包的定义关于闭包，有太多的定义，特别是有一些定义非常抽象，象这个： A “closure” is an expression (typi">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-04T10:52:43.389Z">
+<meta property="og:updated_time" content="2018-03-04T15:23:53.790Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript闭包">
 <meta name="twitter:description" content="闭包是ECMAScript一个很重要的特征，但是却很难用合适的定义来描述它。虽然闭包很难清晰地描述，但是，却很容易创建，或者说，不小心创建。然而，闭包的存在其实是有一定的潜在问题的。为了避免“不小心”地创建闭包，以及更好地利用闭包的优点，有必要理解闭包的机制。 闭包的定义关于闭包，有太多的定义，特别是有一些定义非常抽象，象这个： A “closure” is an expression (typi">
@@ -172,6 +172,7 @@ ga('send', 'pageview');
 <h2 id="闭包的定义"><a href="#闭包的定义" class="headerlink" title="闭包的定义"></a>闭包的定义</h2><p>关于闭包，有太多的定义，特别是有一些定义非常抽象，象这个：</p>
 <p>A “closure” is an expression (typically a function) that can have free variables together with an environment that binds those variables.</p>
 <p>大致是说闭包是一个表达式，拥有一些自由变量及绑定这些变量的执行环境。这种定义太书面化，反而难以理解。</p>
+ <a id="more"></a>
 <p>还有另一个定义：</p>
 <p><strong>所有函数都是闭包。</strong>这个定义给我很大的迷惑，换句话说，由于Javascript没有块级作用域，因此闭包一般指的是函数（想不出除了函数以外还有哪些方式可以构成闭包）。</p>
 <p>这里不想太多讨论函数与闭包的关系，下面给出我认为比较容易理解的定义吧。</p>

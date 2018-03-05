@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://kingzhang.github.io">
   <title>Javascript命名空间模式 | 水煮前端</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="命名空间是通过为项目或库创建一个全局对象，然后将所有功能添加到该全局变量中。通过减少程序中全局变量的数量，实现单全局变量，从而在具有大量函数、对象和其他变量的情况下不会造成全局污染，同时也避免了命名冲突等问题。 然而，在不同的文件中给一个命名空间添加属性的时候，首先要保证这个命名空间是已经存在的，同时不对已有的命名空间造成任何破坏。可以通过非破坏性的命名空间函数实现： 12345678910111">
+  <meta name="description" content="命名空间是通过为项目或库创建一个全局对象，然后将所有功能添加到该全局变量中。通过减少程序中全局变量的数量，实现单全局变量，从而在具有大量函数、对象和其他变量的情况下不会造成全局污染，同时也避免了命名冲突等问题。 然而，在不同的文件中给一个命名空间添加属性的时候，首先要保证这个命名空间是已经存在的，同时不对已有的命名空间造成任何破坏。可以通过非破坏性的命名空间函数实现：">
 <meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript命名空间模式">
 <meta property="og:url" content="https://kingzhang.github.io/2017/11/10/2017-11-11/Javascript命名空间模式/index.html">
 <meta property="og:site_name" content="水煮前端">
-<meta property="og:description" content="命名空间是通过为项目或库创建一个全局对象，然后将所有功能添加到该全局变量中。通过减少程序中全局变量的数量，实现单全局变量，从而在具有大量函数、对象和其他变量的情况下不会造成全局污染，同时也避免了命名冲突等问题。 然而，在不同的文件中给一个命名空间添加属性的时候，首先要保证这个命名空间是已经存在的，同时不对已有的命名空间造成任何破坏。可以通过非破坏性的命名空间函数实现： 12345678910111">
+<meta property="og:description" content="命名空间是通过为项目或库创建一个全局对象，然后将所有功能添加到该全局变量中。通过减少程序中全局变量的数量，实现单全局变量，从而在具有大量函数、对象和其他变量的情况下不会造成全局污染，同时也避免了命名冲突等问题。 然而，在不同的文件中给一个命名空间添加属性的时候，首先要保证这个命名空间是已经存在的，同时不对已有的命名空间造成任何破坏。可以通过非破坏性的命名空间函数实现：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-04T10:52:43.388Z">
+<meta property="og:updated_time" content="2018-03-04T15:24:11.268Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript命名空间模式">
-<meta name="twitter:description" content="命名空间是通过为项目或库创建一个全局对象，然后将所有功能添加到该全局变量中。通过减少程序中全局变量的数量，实现单全局变量，从而在具有大量函数、对象和其他变量的情况下不会造成全局污染，同时也避免了命名冲突等问题。 然而，在不同的文件中给一个命名空间添加属性的时候，首先要保证这个命名空间是已经存在的，同时不对已有的命名空间造成任何破坏。可以通过非破坏性的命名空间函数实现： 12345678910111">
+<meta name="twitter:description" content="命名空间是通过为项目或库创建一个全局对象，然后将所有功能添加到该全局变量中。通过减少程序中全局变量的数量，实现单全局变量，从而在具有大量函数、对象和其他变量的情况下不会造成全局污染，同时也避免了命名冲突等问题。 然而，在不同的文件中给一个命名空间添加属性的时候，首先要保证这个命名空间是已经存在的，同时不对已有的命名空间造成任何破坏。可以通过非破坏性的命名空间函数实现：">
   
     <link rel="alternative" href="/atom.xml" title="水煮前端" type="application/atom+xml">
   
@@ -170,6 +170,7 @@ ga('send', 'pageview');
       
         <p>命名空间是通过为项目或库创建一个全局对象，然后将所有功能添加到该全局变量中。通过减少程序中全局变量的数量，实现单全局变量，从而在具有大量函数、对象和其他变量的情况下不会造成全局污染，同时也避免了命名冲突等问题。</p>
 <p>然而，在不同的文件中给一个命名空间添加属性的时候，首先要保证这个命名空间是已经存在的，同时不对已有的命名空间造成任何破坏。可以通过非破坏性的命名空间函数实现：</p>
+<a id="more"></a>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> KUI = KUI || &#123;&#125;;</span><br><span class="line">KUI.utils = KUI.utils || &#123;&#125;;</span><br><span class="line"></span><br><span class="line">KUI.utils.namespace = <span class="function"><span class="keyword">function</span>(<span class="params">ns</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> parts = ns.split(<span class="string">"."</span>),</span><br><span class="line">        object = KUI,</span><br><span class="line">        i, len;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(parts[<span class="number">0</span>] === <span class="string">"KUI"</span>)&#123;</span><br><span class="line">        parts = parts.slice(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>, len = parts.length; i &lt; len; i+=<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!object[parts[i]])&#123;</span><br><span class="line">            object[parts[i]] = &#123;&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        object = object[parts[i]];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> object;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>用法：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">KUI.utils.namespace(<span class="string">"KUI.common"</span>);</span><br><span class="line"></span><br><span class="line">KUI.utils.namespace(<span class="string">"KUI.common.testing"</span>);</span><br><span class="line"></span><br><span class="line">KUI.utils.namespace(<span class="string">"KUI.modules.function.plugins"</span>);</span><br><span class="line"></span><br><span class="line">KUI.utils.namespace(<span class="string">"format"</span>);</span><br></pre></td></tr></table></figure>

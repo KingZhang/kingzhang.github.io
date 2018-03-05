@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://kingzhang.github.io">
   <title>整合jQuery和Prototype遇到的问题 | 水煮前端</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="由于项目要在旧的服务器上面运行，而旧的服务器底层用了Prototype，所以需要解决jQuery和Prototype冲突的问题。 $符号冲突问题这个还是很好解决的。 1jQuery.noConflict() 而如果不想将原来所有$符号换成jQuery，可以用即时函数包住原来的jQuery代码： 12345678(function($)&amp;#123;&amp;#125;)(jQuery);jQuery(doc">
+  <meta name="description" content="由于项目要在旧的服务器上面运行，而旧的服务器底层用了Prototype，所以需要解决jQuery和Prototype冲突的问题。 $符号冲突问题这个还是很好解决的。 1jQuery.noConflict() 而如果不想将原来所有$符号换成jQuery，可以用即时函数包住原来的jQuery代码：">
 <meta name="keywords" content="jQuery,Prototype">
 <meta property="og:type" content="article">
 <meta property="og:title" content="整合jQuery和Prototype遇到的问题">
 <meta property="og:url" content="https://kingzhang.github.io/2017/11/10/2017-11-11/整合jQuery和Prototype遇到的问题/index.html">
 <meta property="og:site_name" content="水煮前端">
-<meta property="og:description" content="由于项目要在旧的服务器上面运行，而旧的服务器底层用了Prototype，所以需要解决jQuery和Prototype冲突的问题。 $符号冲突问题这个还是很好解决的。 1jQuery.noConflict() 而如果不想将原来所有$符号换成jQuery，可以用即时函数包住原来的jQuery代码： 12345678(function($)&amp;#123;&amp;#125;)(jQuery);jQuery(doc">
+<meta property="og:description" content="由于项目要在旧的服务器上面运行，而旧的服务器底层用了Prototype，所以需要解决jQuery和Prototype冲突的问题。 $符号冲突问题这个还是很好解决的。 1jQuery.noConflict() 而如果不想将原来所有$符号换成jQuery，可以用即时函数包住原来的jQuery代码：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-04T10:52:43.404Z">
+<meta property="og:updated_time" content="2018-03-04T15:25:33.459Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="整合jQuery和Prototype遇到的问题">
-<meta name="twitter:description" content="由于项目要在旧的服务器上面运行，而旧的服务器底层用了Prototype，所以需要解决jQuery和Prototype冲突的问题。 $符号冲突问题这个还是很好解决的。 1jQuery.noConflict() 而如果不想将原来所有$符号换成jQuery，可以用即时函数包住原来的jQuery代码： 12345678(function($)&amp;#123;&amp;#125;)(jQuery);jQuery(doc">
+<meta name="twitter:description" content="由于项目要在旧的服务器上面运行，而旧的服务器底层用了Prototype，所以需要解决jQuery和Prototype冲突的问题。 $符号冲突问题这个还是很好解决的。 1jQuery.noConflict() 而如果不想将原来所有$符号换成jQuery，可以用即时函数包住原来的jQuery代码：">
   
     <link rel="alternative" href="/atom.xml" title="水煮前端" type="application/atom+xml">
   
@@ -172,6 +172,7 @@ ga('send', 'pageview');
 <h2 id="符号冲突问题"><a href="#符号冲突问题" class="headerlink" title="$符号冲突问题"></a>$符号冲突问题</h2><p>这个还是很好解决的。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jQuery.noConflict()</span><br></pre></td></tr></table></figure>
 <p>而如果不想将原来所有$符号换成jQuery，可以用即时函数包住原来的jQuery代码：</p>
+<a id="more"></a>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line">&#125;)(jQuery);</span><br><span class="line"></span><br><span class="line">jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">jQuery(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="for-in-数组循环问题"><a href="#for-in-数组循环问题" class="headerlink" title="for in 数组循环问题"></a>for in 数组循环问题</h2><p>for in 语句本身并不是一个 “bad practice”，但是却容易被误用，比如用在数组上。</p>
 <p>使用for in语句首先要注意，如果不能百分百确定，那么请使用hasOwnProperty：</p>

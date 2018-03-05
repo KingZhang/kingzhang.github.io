@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="水煮前端">
 <meta property="og:description" content="Javascript中，this是一个非常有用的关键字, this是在运行时基于函数的运行环境绑定的，但是，如果使用的时候不注意，很容易就出错了。 ECMAScript Standard对this的定义看起来非常简单： The this keyword evaluates to the value of the ThisBinding of the current execution contex">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-04T10:52:43.380Z">
+<meta property="og:updated_time" content="2018-03-04T15:23:46.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript this 解析">
 <meta name="twitter:description" content="Javascript中，this是一个非常有用的关键字, this是在运行时基于函数的运行环境绑定的，但是，如果使用的时候不注意，很容易就出错了。 ECMAScript Standard对this的定义看起来非常简单： The this keyword evaluates to the value of the ThisBinding of the current execution contex">
@@ -171,6 +171,7 @@ ga('send', 'pageview');
         <p>Javascript中，this是一个非常有用的关键字, this是在运行时基于函数的运行环境绑定的，但是，如果使用的时候不注意，很容易就出错了。</p>
 <p>ECMAScript Standard对this的定义看起来非常简单： The this keyword evaluates to the value of the <strong>ThisBinding</strong> of the current <strong>execution context</strong>.</p>
 <p>其中，对于ThisBinding和execution context, ECMAScript Standard 有另外的详细说明：</p>
+<a id="more"></a>
 <h2 id="执行环境-引用http-ecmascript-cn"><a href="#执行环境-引用http-ecmascript-cn" class="headerlink" title="执行环境(引用http://ecmascript.cn/)"></a>执行环境(引用<a href="http://ecmascript.cn/" target="_blank" rel="noopener">http://ecmascript.cn/</a>)</h2><p>当控制器转入 ECMA 脚本的可执行代码时，控制器会进入一个执行环境。<strong>当前活动的多个执行环境在逻辑上形成一个栈结构。</strong>该逻辑栈的最顶层的执行环境称为当前运行的执行环境。<strong>任何时候，当控制器从当前运行的执行环境相关的可执行代码转入与该执行环境无关的可执行代码时，会创建一个新的执行环境。新建的这个执行环境会推入栈中，成为当前运行的执行环境。</strong></p>
 <p>执行环境包含所有用于追踪与其相关的代码的执行进度的状态。精确地说，每个执行环境包含如下表列出的组件。</p>
 <p>执行环境的状态组件</p>

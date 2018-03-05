@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="水煮前端">
 <meta property="og:description" content="​    IE总是有各种稀奇古怪的错误，IE8之后还好点，至少可以dubug。IE6 IE7就是灾难，报错就算了，所谓的error line总是指向莫名奇妙的地方，让人一头雾水。最近在IE7上碰到一个error：“Object doesn’t support this action”，指向的error line竟然是空行，而代码在其他浏览器没有问题。 ​      仔细检查，发现下面这行代码出错了">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-04T10:52:43.377Z">
+<meta property="og:updated_time" content="2018-03-04T15:23:35.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IE error： object doesn&#39;t support this action">
 <meta name="twitter:description" content="​    IE总是有各种稀奇古怪的错误，IE8之后还好点，至少可以dubug。IE6 IE7就是灾难，报错就算了，所谓的error line总是指向莫名奇妙的地方，让人一头雾水。最近在IE7上碰到一个error：“Object doesn’t support this action”，指向的error line竟然是空行，而代码在其他浏览器没有问题。 ​      仔细检查，发现下面这行代码出错了">
@@ -172,6 +172,7 @@ ga('send', 'pageview');
 <p>​      仔细检查，发现下面这行代码出错了：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>, length = currencyMap.length; i &lt; length; i++)</span><br></pre></td></tr></table></figure>
 <p>发现没有用var定义变量，先加上：</p>
+<a id="more"></a>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>, length = currencyMap.length; i &lt; length; i++)</span><br></pre></td></tr></table></figure>
 <p>再运行，不再报错了。</p>
 <p>​       一般来说，如果声明的时候没有使用var关键字，就相当于window.length。但是IE为什么却抛出“Object doesn’t support this action”？</p>

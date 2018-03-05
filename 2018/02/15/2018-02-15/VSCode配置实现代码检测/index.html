@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="https://kingzhang.github.io">
   <title>VSCode配置实现代码检测 | 水煮前端</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用了一段时间的VSCode之后，发现确实方便，而且可以无缝从SublimeText切换过来。在代码静态检测这块，同样是使用eslint，VSCode明显比SublimeText更加方便和明了。 安装VSCode从官网下载VSCode,安装完成后可以设置为SublimeText快捷方式。 在项目中配置eslintVSCode自带eslint插件，因此无需再安装，直接在项目中进行配置即可。eslin">
+  <meta name="description" content="使用了一段时间的VSCode之后，发现确实方便，而且可以无缝从SublimeText切换过来。在代码静态检测这块，同样是使用eslint，VSCode明显比SublimeText更加方便和明了。 安装VSCode从官网下载VSCode,安装完成后可以设置为SublimeText快捷方式。">
 <meta name="keywords" content="vscode,eslint,airbnb,prettier">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VSCode配置实现代码检测">
 <meta property="og:url" content="https://kingzhang.github.io/2018/02/15/2018-02-15/VSCode配置实现代码检测/index.html">
 <meta property="og:site_name" content="水煮前端">
-<meta property="og:description" content="使用了一段时间的VSCode之后，发现确实方便，而且可以无缝从SublimeText切换过来。在代码静态检测这块，同样是使用eslint，VSCode明显比SublimeText更加方便和明了。 安装VSCode从官网下载VSCode,安装完成后可以设置为SublimeText快捷方式。 在项目中配置eslintVSCode自带eslint插件，因此无需再安装，直接在项目中进行配置即可。eslin">
+<meta property="og:description" content="使用了一段时间的VSCode之后，发现确实方便，而且可以无缝从SublimeText切换过来。在代码静态检测这块，同样是使用eslint，VSCode明显比SublimeText更加方便和明了。 安装VSCode从官网下载VSCode,安装完成后可以设置为SublimeText快捷方式。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://kingzhang.github.io/2018/02/15/2018-02-15/VSCode配置实现代码检测/vscode初始化.png">
 <meta property="og:image" content="https://kingzhang.github.io/2018/02/15/2018-02-15/VSCode配置实现代码检测/eslint%20error.png">
-<meta property="og:updated_time" content="2018-03-04T10:52:43.406Z">
+<meta property="og:updated_time" content="2018-03-04T15:22:47.899Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VSCode配置实现代码检测">
-<meta name="twitter:description" content="使用了一段时间的VSCode之后，发现确实方便，而且可以无缝从SublimeText切换过来。在代码静态检测这块，同样是使用eslint，VSCode明显比SublimeText更加方便和明了。 安装VSCode从官网下载VSCode,安装完成后可以设置为SublimeText快捷方式。 在项目中配置eslintVSCode自带eslint插件，因此无需再安装，直接在项目中进行配置即可。eslin">
+<meta name="twitter:description" content="使用了一段时间的VSCode之后，发现确实方便，而且可以无缝从SublimeText切换过来。在代码静态检测这块，同样是使用eslint，VSCode明显比SublimeText更加方便和明了。 安装VSCode从官网下载VSCode,安装完成后可以设置为SublimeText快捷方式。">
 <meta name="twitter:image" content="https://kingzhang.github.io/2018/02/15/2018-02-15/VSCode配置实现代码检测/vscode初始化.png">
   
     <link rel="alternative" href="/atom.xml" title="水煮前端" type="application/atom+xml">
@@ -172,7 +172,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>使用了一段时间的VSCode之后，发现确实方便，而且可以无缝从SublimeText切换过来。在代码静态检测这块，同样是使用eslint，VSCode明显比SublimeText更加方便和明了。</p>
-<h3 id="安装VSCode"><a href="#安装VSCode" class="headerlink" title="安装VSCode"></a>安装VSCode</h3><p>从<a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener">官网下载</a>VSCode,安装完成后可以设置为SublimeText快捷方式。<br><img src="/2018/02/15/2018-02-15/VSCode配置实现代码检测/vscode初始化.png" alt="VSCode install"></p>
+<h3 id="安装VSCode"><a href="#安装VSCode" class="headerlink" title="安装VSCode"></a>安装VSCode</h3><p>从<a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener">官网下载</a>VSCode,安装完成后可以设置为SublimeText快捷方式。<br><a id="more"></a><br><img src="/2018/02/15/2018-02-15/VSCode配置实现代码检测/vscode初始化.png" alt="VSCode install"></p>
 <h3 id="在项目中配置eslint"><a href="#在项目中配置eslint" class="headerlink" title="在项目中配置eslint"></a>在项目中配置eslint</h3><p>VSCode自带eslint插件，因此无需再安装，直接在项目中进行配置即可。<br>eslint规则方面，目前使用airbnb规则集，再针对一些做调正。<br>配置完成后，如果代码不满足静态规则，会提示错误，并且无法打包。</p>
 <blockquote>
 <p>也可以在代码中使用注释的方式在特殊情况下屏蔽规则。</p>
