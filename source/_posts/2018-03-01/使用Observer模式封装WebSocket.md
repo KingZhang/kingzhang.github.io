@@ -18,7 +18,7 @@ npm install --save ws-request
 ```
 
 ## 使用
-
+<!--more-->
 ```javascript
 import WsRequest from 'ws-request';
 

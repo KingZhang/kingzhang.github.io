@@ -17,7 +17,7 @@ A "closure" is an expression (typically a function) that can have free variables
 
 大致是说闭包是一个表达式，拥有一些自由变量及绑定这些变量的执行环境。这种定义太书面化，反而难以理解。
 
- 
+ <!--more-->
 
 还有另一个定义：
 

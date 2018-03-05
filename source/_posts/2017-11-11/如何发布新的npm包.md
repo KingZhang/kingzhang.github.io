@@ -20,7 +20,7 @@ tags:
 
 必须完成邮箱验证，否则publish的时候会报错。
 
-
+<!--more-->
 
 ## 发布 npm publish
 

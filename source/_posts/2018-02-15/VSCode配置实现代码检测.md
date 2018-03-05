@@ -12,6 +12,7 @@ tags:
 
 ### 安装VSCode
 从[官网下载](https://code.visualstudio.com/Download)VSCode,安装完成后可以设置为SublimeText快捷方式。
+<!--more-->
 ![VSCode install](VSCode配置实现代码检测/vscode初始化.png)
 
 ### 在项目中配置eslint

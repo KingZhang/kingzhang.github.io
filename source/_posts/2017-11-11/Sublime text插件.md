@@ -20,6 +20,8 @@ tags:
 
 JsFormat只能格式化js 代码，这个可以格式HTML, CSS 和JS代码。
 
+<!--more-->
+
 ## Side bar
 
 加强版的侧边栏。

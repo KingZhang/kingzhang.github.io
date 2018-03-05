@@ -20,6 +20,8 @@ tags:
 
 或者添加到 .babelrc文件
 
+<!--more-->
+
 ## Failed at the node-sass@3.13.1 postinstall script
 
 缺少python的编译环境，安装node-gyp和gym：

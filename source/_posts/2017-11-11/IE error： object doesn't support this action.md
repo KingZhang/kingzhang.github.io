@@ -17,6 +17,8 @@ for(i = 0, length = currencyMap.length; i < length; i++)
 
 发现没有用var定义变量，先加上：
 
+<!--more-->
+
 ```javascript
 for(var i = 0, length = currencyMap.length; i < length; i++)
 ```

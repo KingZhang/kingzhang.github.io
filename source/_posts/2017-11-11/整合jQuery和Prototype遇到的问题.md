@@ -19,6 +19,8 @@ jQuery.noConflict()
 
 而如果不想将原来所有$符号换成jQuery，可以用即时函数包住原来的jQuery代码：
 
+<!--more-->
+
 ```javascript
 (function($){
 })(jQuery);
