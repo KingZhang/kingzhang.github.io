@@ -28,7 +28,7 @@ function test(name, age = 100) {
 test(); // undefined, 100
 ```
 
-
+<!--more-->
 
 ## 默认值只过滤undefined
 
