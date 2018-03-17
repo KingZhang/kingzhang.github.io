@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://kingzhang.github.io">
-  <title>水煮前端</title>
+  <title>ES6 import export | 水煮前端</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="水煮前端">
-<meta property="og:url" content="https://kingzhang.github.io/index.html">
+  <meta name="description" content="ES6 import &amp;amp; export 有下面几种用法： 默认导出（default export）123456789// People.jsconst People = function() &amp;#123;    // ......&amp;#125;export default People;// index.jsimport People from &apos;People&apos;;const people =">
+<meta name="keywords" content="Javascript,import,export">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 import export">
+<meta property="og:url" content="https://kingzhang.github.io/2018/03/17/2018-03-17/ES6 import export/index.html">
 <meta property="og:site_name" content="水煮前端">
+<meta property="og:description" content="ES6 import &amp;amp; export 有下面几种用法： 默认导出（default export）123456789// People.jsconst People = function() &amp;#123;    // ......&amp;#125;export default People;// index.jsimport People from &apos;People&apos;;const people =">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-17T13:16:57.186Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="水煮前端">
+<meta name="twitter:title" content="ES6 import export">
+<meta name="twitter:description" content="ES6 import &amp;amp; export 有下面几种用法： 默认导出（default export）123456789// People.jsconst People = function() &amp;#123;    // ......&amp;#125;export default People;// index.jsimport People from &apos;People&apos;;const people =">
   
     <link rel="alternative" href="/atom.xml" title="水煮前端" type="application/atom+xml">
   
@@ -144,99 +148,14 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-2018-03-17/Javascript解构赋值设置默认值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-2018-03-17/ES6 import export" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/17/2018-03-17/Javascript解构赋值设置默认值/">Javascript解构赋值设置默认值</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/17/2018-03-17/Javascript解构赋值设置默认值/" class="archive-article-date">
-  	<time datetime="2018-03-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>ES6解构赋值设置默认值语法如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> people = &#123;</span><br><span class="line">    firseName: <span class="string">'test'</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> &#123; firseName = <span class="string">'firseName'</span>, secondName = <span class="string">'secondName'</span> &#125; = people;</span><br><span class="line"><span class="built_in">console</span>.log(firseName); <span class="comment">// 'test'</span></span><br><span class="line"><span class="built_in">console</span>.log(secondName); <span class="comment">// 'secondName'</span></span><br></pre></td></tr></table></figure>
-<p>PS. 方法参数设置默认值类似</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">name, age = <span class="number">100</span></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name, age);</span><br><span class="line">&#125;</span><br><span class="line">test(); <span class="comment">// undefined, 100</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/03/17/2018-03-17/Javascript解构赋值设置默认值/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Destructuring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/17/2018-03-17/Javascript解构赋值设置默认值/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2018-03-17/ES6 import export" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/17/2018-03-17/ES6 import export/">ES6 import export</a>
+    <h1 class="article-title" itemprop="name">
+      ES6 import export
     </h1>
   
 
@@ -252,9 +171,10 @@ ga('send', 'pageview');
         <p>ES6 import &amp; export 有下面几种用法：</p>
 <h2 id="默认导出（default-export）"><a href="#默认导出（default-export）" class="headerlink" title="默认导出（default export）"></a>默认导出（default export）</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// People.js</span></span><br><span class="line"><span class="keyword">const</span> People = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// ......</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> People;</span><br><span class="line"></span><br><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">import</span> People <span class="keyword">from</span> <span class="string">'People'</span>;</span><br><span class="line"><span class="keyword">const</span> people = <span class="keyword">new</span> People();</span><br></pre></td></tr></table></figure>
 <p>一个文件中只能存在一个默认导出模块。</p>
-        
-          <a class="article-more-a" href="/2018/03/17/2018-03-17/ES6 import export/#more">more >></a>
-        
+<a id="more"></a>
+<h2 id="命名导出（named-export）"><a href="#命名导出（named-export）" class="headerlink" title="命名导出（named export）"></a>命名导出（named export）</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Utils.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> appName = <span class="string">'appName'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'getName'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="comment">// 用法一</span></span><br><span class="line"><span class="keyword">import</span> &#123; appName, getName &#125; <span class="keyword">from</span> <span class="string">'Utils'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'appName'</span>, appName);</span><br><span class="line">getName();</span><br><span class="line"><span class="comment">// 用法二</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> Utils <span class="keyword">from</span> <span class="string">'Utils'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'appName'</span>, Utils.appName);</span><br><span class="line">Utils.getName();</span><br></pre></td></tr></table></figure>
+<h2 id="混合导出-（mixed-export）"><a href="#混合导出-（mixed-export）" class="headerlink" title="混合导出 （mixed export）"></a>混合导出 （mixed export）</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Utils.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">getDefault</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'default export'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'getName'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> &#123; each <span class="keyword">as</span> forEach &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">import</span> getDefault, &#123; getName &#125; <span class="keyword">from</span> <span class="string">'Utils'</span>;</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -284,16 +204,84 @@ ga('send', 'pageview');
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/17/2018-03-17/ES6 import export/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://kingzhang.github.io/2018/03/17/2018-03-17/ES6 import export/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/03/17/2018-03-17/Javascript解构赋值设置默认值/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Javascript解构赋值设置默认值
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/01/2018-03-01/使用Observer模式封装WebSocket/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用Observer模式封装WebSocket</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -308,669 +296,32 @@ ga('send', 'pageview');
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2018-03-01/使用Observer模式封装WebSocket" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/01/2018-03-01/使用Observer模式封装WebSocket/">使用Observer模式封装WebSocket</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/01/2018-03-01/使用Observer模式封装WebSocket/" class="archive-article-date">
-  	<time datetime="2018-02-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>利用Observer模式封装WebSocket的插件，后端需遵从一定的数据结构。</p>
-<p><a href="https://github.com/kingzhang/ws-request" target="_blank" rel="noopener">Github</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save ws-request</span><br></pre></td></tr></table></figure>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2>
-        
-          <a class="article-more-a" href="/2018/03/01/2018-03-01/使用Observer模式封装WebSocket/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">npm</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">websocket</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">observer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/01/2018-03-01/使用Observer模式封装WebSocket/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#默认导出（default-export）"><span class="toc-number">1.</span> <span class="toc-text">默认导出（default export）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命名导出（named-export）"><span class="toc-number">2.</span> <span class="toc-text">命名导出（named export）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#混合导出-（mixed-export）"><span class="toc-number">3.</span> <span class="toc-text">混合导出 （mixed export）</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-2018-02-15/VSCode配置实现代码检测" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/15/2018-02-15/VSCode配置实现代码检测/">VSCode配置实现代码检测</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/15/2018-02-15/VSCode配置实现代码检测/" class="archive-article-date">
-  	<time datetime="2018-02-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>使用了一段时间的VSCode之后，发现确实方便，而且可以无缝从SublimeText切换过来。在代码静态检测这块，同样是使用eslint，VSCode明显比SublimeText更加方便和明了。</p>
-<h3 id="安装VSCode"><a href="#安装VSCode" class="headerlink" title="安装VSCode"></a>安装VSCode</h3><p>从<a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener">官网下载</a>VSCode,安装完成后可以设置为SublimeText快捷方式。<br></p>
-        
-          <a class="article-more-a" href="/2018/02/15/2018-02-15/VSCode配置实现代码检测/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vscode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">eslint</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">airbnb</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">prettier</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/15/2018-02-15/VSCode配置实现代码检测/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-11-11/Sublime text插件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/11/2017-11-11/Sublime text插件/">Sublime text插件</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/11/2017-11-11/Sublime text插件/" class="archive-article-date">
-  	<time datetime="2017-11-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Emmet"><a href="#Emmet" class="headerlink" title="Emmet"></a>Emmet</h2><p>可以说是必备了，可以快速编写HTML代码。</p>
-<p><img src="/2017/11/11/2017-11-11/Sublime text插件/emmet.gif" alt="emmet"></p>
-<h2 id="HTML-CSS-JS-Prettify"><a href="#HTML-CSS-JS-Prettify" class="headerlink" title="HTML-CSS-JS Prettify"></a>HTML-CSS-JS Prettify</h2><p>代码格式化插件。</p>
-<p>JsFormat只能格式化js 代码，这个可以格式HTML, CSS 和JS代码。</p>
-        
-          <a class="article-more-a" href="/2017/11/11/2017-11-11/Sublime text插件/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">SublimeText</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/11/2017-11-11/Sublime text插件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-11-11/Nodejs复制文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/11/2017-11-11/Nodejs复制文件/">Nodejs复制文件</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/11/2017-11-11/Nodejs复制文件/" class="archive-article-date">
-  	<time datetime="2017-11-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="新版本"><a href="#新版本" class="headerlink" title="新版本"></a>新版本</h2><p>Node.js 8.5.0版本之后有api方法fs.copyFile 和fs.copyFileSync对文件复制。</p>
-<h2 id="旧版本"><a href="#旧版本" class="headerlink" title="旧版本"></a>旧版本</h2><p>通过stream进行文件复制：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line">fs.createReadStream(<span class="string">'test.log'</span>).pipe(fs.createWriteStream(<span class="string">'newLog.log'</span>));</span><br></pre></td></tr></table></figure>
-<p>如果你必须对<code>createReadStream</code> 和 createWriteStream 做错误处理：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">copyFile</span>(<span class="params">source, target, cb</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> cbCalled = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> rd = fs.createReadStream(source);</span><br><span class="line">  rd.on(<span class="string">"error"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    done(err);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">var</span> wr = fs.createWriteStream(target);</span><br><span class="line">  wr.on(<span class="string">"error"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    done(err);</span><br><span class="line">  &#125;);</span><br><span class="line">  wr.on(<span class="string">"close"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">ex</span>) </span>&#123;</span><br><span class="line">    done();</span><br><span class="line">  &#125;);</span><br><span class="line">  rd.pipe(wr);</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">done</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!cbCalled) &#123;</span><br><span class="line">      cb(err);</span><br><span class="line">      cbCalled = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Nodejs</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/11/2017-11-11/Nodejs复制文件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-11-11/webpack问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/11/2017-11-11/webpack问题/">webpack问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/11/2017-11-11/webpack问题/" class="archive-article-date">
-  	<time datetime="2017-11-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="webpack-jsx-Unexpected-token"><a href="#webpack-jsx-Unexpected-token" class="headerlink" title="webpack jsx  Unexpected token:"></a>webpack jsx  Unexpected token:</h2><p>配置loader</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  test: /\.js[x]?$/,</span><br><span class="line">  loaders: ['react-hot', 'babel?presets[]=es2015&amp;presets[]=react'],</span><br><span class="line">  exclude: path.join(rootPath, 'node_modules')</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>或者添加到 .babelrc文件</p>
-        
-          <a class="article-more-a" href="/2017/11/11/2017-11-11/webpack问题/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/11/2017-11-11/webpack问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-11-11/如何发布新的npm包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/11/2017-11-11/如何发布新的npm包/">如何发布新的npm包</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/11/2017-11-11/如何发布新的npm包/" class="archive-article-date">
-  	<time datetime="2017-11-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="初始化-npm-init"><a href="#初始化-npm-init" class="headerlink" title="初始化 npm init"></a>初始化 npm init</h2><p>按照需求填写项目信息即可，注意git repository要跟github上或者其他git仓库匹配。</p>
-<p>初始化完成后可以进行开发，开发完成后，开始发布。</p>
-<h2 id="登录npm：npm-login"><a href="#登录npm：npm-login" class="headerlink" title="登录npm：npm login"></a>登录npm：npm login</h2><p>通过npm login命令登录，如果未注册请先到网页注册帐号~</p>
-<p>必须完成邮箱验证，否则publish的时候会报错。</p>
-        
-          <a class="article-more-a" href="/2017/11/11/2017-11-11/如何发布新的npm包/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">npm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/11/2017-11-11/如何发布新的npm包/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-11-11/Whistle + SwitchyOmega实现本地代码代理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/11/2017-11-11/Whistle + SwitchyOmega实现本地代码代理/">Whistle + SwitchyOmega实现本地代码代理</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/11/2017-11-11/Whistle + SwitchyOmega实现本地代码代理/" class="archive-article-date">
-  	<time datetime="2017-11-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Whistle"><a href="#Whistle" class="headerlink" title="Whistle"></a>Whistle</h2><p><a href="https://github.com/avwo/whistle" target="_blank" rel="noopener">whistle</a>是一款用<a href="https://nodejs.org/" target="_blank" rel="noopener">Node</a>实现的跨平台的Web调试代理工具，支持查看修改http(s)、Websocket连接的请求和响应内容。</p>
-<p>类似Fiddler，之前也是因为Fiddler无法使用，才找到替代方案。</p>
-<p>详细的使用文档参考官网 <a href="https://avwo.github.io/whistle" target="_blank" rel="noopener">https://avwo.github.io/whistle</a></p>
-<p>需要注意的是：</p>
-        
-          <a class="article-more-a" href="/2017/11/11/2017-11-11/Whistle + SwitchyOmega实现本地代码代理/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Whistle</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwitchOmmega</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/11/2017-11-11/Whistle + SwitchyOmega实现本地代码代理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-11-11/CSS：word-wrap和word-break" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/10/2017-11-11/CSS：word-wrap和word-break/">CSS：word-wrap和word-break</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/10/2017-11-11/CSS：word-wrap和word-break/" class="archive-article-date">
-  	<time datetime="2017-11-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近修改页面排版的一些问题，发现关于内容分词换行有两个主要的CSS：</p>
-<h2 id="word-wrap-和-word-break"><a href="#word-wrap-和-word-break" class="headerlink" title="word-wrap 和 word-break"></a>word-wrap 和 word-break</h2><p>特别是word-wrap还有个取值break-word，更使得这两个属性容易混淆。</p>
-<p>先来看看这两个属性的定义和取值吧：</p>
-<p>word-warp：用来表明是否允许<strong>长单词</strong>内断句而移至下一行。</p>
-        
-          <a class="article-more-a" href="/2017/11/10/2017-11-11/CSS：word-wrap和word-break/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/10/2017-11-11/CSS：word-wrap和word-break/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -993,8 +344,8 @@ ga('send', 'pageview');
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
