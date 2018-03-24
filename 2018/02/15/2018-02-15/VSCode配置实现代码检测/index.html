@@ -180,7 +180,7 @@ ga('send', 'pageview');
 <p><img src="/2018/02/15/2018-02-15/VSCode配置实现代码检测/eslint error.png" alt="eslint error"><br>image</p>
 <h4 id="安装eslint相关包"><a href="#安装eslint相关包" class="headerlink" title="安装eslint相关包"></a>安装eslint相关包</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm --save-dev install eslint</span><br><span class="line">npm --save-dev install eslint-loader</span><br></pre></td></tr></table></figure>
 <p>如果安装过慢可以临时使用淘宝镜像，或者直接修改镜像地址<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install XXXXXXX #临时使用淘宝镜像安装某一个包</span><br><span class="line"></span><br><span class="line">npm config set registry https://registry.npm.taobao.org #直接修改npm镜像地址</span><br></pre></td></tr></table></figure></p>
-<h4 id="安装airbnb"><a href="#安装airbnb" class="headerlink" title="安装airbnb"></a>安装airbnb</h4><p>安装airbnb的时候要注意各个包的版本<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>查询版本号</span><br><span class="line">npm info "eslint-config-airbnb@latest" peerDependencies </span><br><span class="line"><span class="meta">#</span>安装对应版本</span><br><span class="line">npm install --save-dev eslint-config-airbnb eslint@^#.#.# eslint-plugin-jsx-a11y@^#.#.# eslint-plugin-import@^#.#.# eslint-plugin-react@^#.#.#</span><br></pre></td></tr></table></figure></p>
+<h4 id="安装airbnb"><a href="#安装airbnb" class="headerlink" title="安装airbnb"></a>安装airbnb</h4><p>安装airbnb的时候要注意各个包的版本<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">查询版本号</span></span><br><span class="line">npm info "eslint-config-airbnb@latest" peerDependencies </span><br><span class="line"><span class="meta">#</span><span class="bash">安装对应版本</span></span><br><span class="line">npm install --save-dev eslint-config-airbnb eslint@^#.#.# eslint-plugin-jsx-a11y@^#.#.# eslint-plugin-import@^#.#.# eslint-plugin-react@^#.#.#</span><br></pre></td></tr></table></figure></p>
 <p>windows可以通过install-peerdeps进行安装<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g install-peerdeps</span><br><span class="line">install-peerdeps --dev eslint-config-airbnb</span><br></pre></td></tr></table></figure></p>
 <p>如果版本安装错误，静态校验的时候可能会出现错误。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Definition for rule &apos;react/jsx-first-prop-new-line&apos; was not found  react/jsx-first-prop-new-line</span><br><span class="line">Definition for rule &apos;jsx-a11y/img-has-alt&apos; was not found           jsx-a11y/img-has-alt</span><br></pre></td></tr></table></figure></p>
 <h4 id="配置webpack"><a href="#配置webpack" class="headerlink" title="配置webpack"></a>配置webpack</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">      preLoaders: [&#123;</span><br><span class="line">        test: /\.js[x]?$/,</span><br><span class="line">        include: [path.join(rootPath, 'app')],</span><br><span class="line">        loader: 'eslint-loader'</span><br><span class="line">      &#125;],</span><br><span class="line">      loaders: [</span><br><span class="line">        // ......</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
@@ -443,15 +443,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Nodejs</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">SublimeText</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color2">Nodejs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Whistle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">SwitchOmmega</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -463,23 +471,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">import</a>
+                <a href="javascript:void(0)" class="js-tag color5">websocket</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">export</a>
+                <a href="javascript:void(0)" class="js-tag color4">observer</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Destructuring</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cache</a>
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -499,23 +499,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color2">import</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+                <a href="javascript:void(0)" class="js-tag color2">export</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">observer</a>
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Whistle</a>
+                <a href="javascript:void(0)" class="js-tag color1">cache</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">SwitchOmmega</a>
+                <a href="javascript:void(0)" class="js-tag color4">Destructuring</a>
               </li>
             
             <div class="clearfix"></div>

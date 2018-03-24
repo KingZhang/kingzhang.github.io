@@ -170,7 +170,12 @@ ga('send', 'pageview');
       
         <p>HTTP协议中定义了一系列请求头和响应头，第一次请求的时候，浏览器向服务器发送请求，后续浏览器根据请求头和响应头控制缓存。</p>
 <a id="more"></a>
-<h2 id="缓存的处理流程"><a href="#缓存的处理流程" class="headerlink" title="缓存的处理流程"></a>缓存的处理流程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">start=&gt;start: 开始</span><br><span class="line">end=&gt;end: 结束</span><br><span class="line">retrieve=&gt;inputoutput: 接受请求报文</span><br><span class="line">analysis=&gt;operation: 解析报文</span><br><span class="line">search=&gt;condition: 是否有缓存可用？</span><br><span class="line">check=&gt;condition: 新鲜度检查</span><br><span class="line">create=&gt;operation: 由缓存生成响应报文</span><br><span class="line">return=&gt;inputoutput: 由缓存返回响应报文</span><br><span class="line">log=&gt;operation: 记录日志</span><br><span class="line"></span><br><span class="line">isChache=&gt;condition: 使用缓存？</span><br><span class="line">toServer=&gt;operation: 发送请求到服务器</span><br><span class="line">serverReturn=&gt;inputoutput: 服务端返回，协商缓存</span><br><span class="line"></span><br><span class="line">send2=&gt;operation: 与服务器再验证</span><br><span class="line"></span><br><span class="line">start-&gt;retrieve-&gt;analysis-&gt;search(yes)-&gt;check(yes)-&gt;create-&gt;return-&gt;log-&gt;end</span><br><span class="line">search(no)-&gt;toServer-&gt;serverReturn-&gt;end</span><br><span class="line">check(no)-&gt;send2-&gt;isChache(yes)-&gt;create-&gt;return-&gt;log-&gt;end</span><br><span class="line">isChache(no)-&gt;toServer-&gt;serverReturn-&gt;end</span><br></pre></td></tr></table></figure>
+<h2 id="缓存的处理流程"><a href="#缓存的处理流程" class="headerlink" title="缓存的处理流程"></a>缓存的处理流程</h2><div id="flowchart-0" class="flow-chart"></div>
+
+
+
+
+
 <h2 id="缓存相关的请求头和响应头"><a href="#缓存相关的请求头和响应头" class="headerlink" title="缓存相关的请求头和响应头"></a>缓存相关的请求头和响应头</h2><h3 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h3><ul>
 <li><p>Cache-Control</p>
 </li>
@@ -239,6 +244,26 @@ ga('send', 'pageview');
 <li>Last-Modified只能以秒为力度，资源可能在一秒以内被修改多次</li>
 </ul>
 <h2 id="HTML配置缓存"><a href="#HTML配置缓存" class="headerlink" title="HTML配置缓存"></a>HTML配置缓存</h2><p>HTML2.0 定义了 <meta http-equiv="">标签（最初为服务器使用），部分浏览器会解析HTML中的HTTP-EQUIV标签，但是HTTP-EQUIV并是不控制缓存的好方法。</p>
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">start=>start: 开始
+end=>end: 结束
+retrieve=>inputoutput: 接受请求报文
+analysis=>operation: 解析报文
+search=>condition: 是否有缓存可用？
+check=>condition: 新鲜度检查
+create=>operation: 由缓存生成响应报文
+return=>inputoutput: 由缓存返回响应报文
+log=>operation: 记录日志
+
+isChache=>condition: 使用缓存？
+toServer=>operation: 发送请求到服务器
+serverReturn=>inputoutput: 服务端返回，协商缓存
+
+send2=>operation: 与服务器再验证
+
+start->retrieve->analysis->search(yes)->check(yes)->create->return->log->end
+search(no)->toServer->serverReturn->end
+check(no)->send2->isChache(yes)->create->return->log->end
+isChache(no)->toServer->serverReturn->end</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 
       
 
@@ -479,15 +504,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Nodejs</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">SublimeText</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color2">Nodejs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Whistle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">SwitchOmmega</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -499,23 +532,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">import</a>
+                <a href="javascript:void(0)" class="js-tag color5">websocket</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">export</a>
+                <a href="javascript:void(0)" class="js-tag color4">observer</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Destructuring</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cache</a>
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -535,23 +560,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color2">import</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+                <a href="javascript:void(0)" class="js-tag color2">export</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">observer</a>
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Whistle</a>
+                <a href="javascript:void(0)" class="js-tag color1">cache</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">SwitchOmmega</a>
+                <a href="javascript:void(0)" class="js-tag color4">Destructuring</a>
               </li>
             
             <div class="clearfix"></div>
