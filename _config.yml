@@ -75,6 +75,11 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: yilia
 
+flowchart:
+  # raphael:   # optional, the source url of raphael.js
+  # flowchart: # optional, the source url of flowchart.js
+  options: drawSVG
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
