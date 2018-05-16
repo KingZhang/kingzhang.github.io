@@ -146,6 +146,167 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2017-11-11/webpack问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/11/2017-11-11/webpack问题/">webpack问题</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/11/2017-11-11/webpack问题/" class="archive-article-date">
+  	<time datetime="2017-11-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="webpack-jsx-Unexpected-token"><a href="#webpack-jsx-Unexpected-token" class="headerlink" title="webpack jsx  Unexpected token:"></a>webpack jsx  Unexpected token:</h2><p>配置loader</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  test: /\.js[x]?$/,</span><br><span class="line">  loaders: ['react-hot', 'babel?presets[]=es2015&amp;presets[]=react'],</span><br><span class="line">  exclude: path.join(rootPath, 'node_modules')</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>或者添加到 .babelrc文件</p>
+        
+          <a class="article-more-a" href="/2017/11/11/2017-11-11/webpack问题/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/11/2017-11-11/webpack问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2017-11-11/IE error： object doesn&#39;t support this action" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/10/2017-11-11/IE error： object doesn't support this action/">IE error： object doesn&#39;t support this action</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/10/2017-11-11/IE error： object doesn't support this action/" class="archive-article-date">
+  	<time datetime="2017-11-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>​    IE总是有各种稀奇古怪的错误，IE8之后还好点，至少可以dubug。IE6 IE7就是灾难，报错就算了，所谓的error line总是指向莫名奇妙的地方，让人一头雾水。最近在IE7上碰到一个error：“Object doesn’t support this action”，指向的error line竟然是空行，而代码在其他浏览器没有问题。</p>
+<p>​      仔细检查，发现下面这行代码出错了：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>, length = currencyMap.length; i &lt; length; i++)</span><br></pre></td></tr></table></figure>
+<p>发现没有用var定义变量，先加上：</p>
+        
+          <a class="article-more-a" href="/2017/11/10/2017-11-11/IE error： object doesn't support this action/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">IE</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/10/2017-11-11/IE error： object doesn't support this action/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2017-11-11/CSS固定顶部和底部" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -194,83 +355,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/11/10/2017-11-11/CSS固定顶部和底部/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-11-11/Javascript原型链" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/10/2017-11-11/Javascript原型链/">Javascript原型链</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/10/2017-11-11/Javascript原型链/" class="archive-article-date">
-  	<time datetime="2017-11-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="原型链的关系"><a href="#原型链的关系" class="headerlink" title="原型链的关系"></a>原型链的关系</h2><p>在Javascript中，只要创建了一个新函数，就会为该函数创建prototype属性，指向函数的原型对象，<strong>Object.prototype是所有对象最顶层的原型</strong>。所有对象都继承由Object构造函数创建的原型对象，也就是说，所有的原型对象都继承Object.prototype的属性，而这个原型对象默认有一个constructor属性指向Object构造方法的原型。</p>
-<p><strong>默认所有原型对象都会有constructor属性，这个属性包含一个指向prototype属性所在函数的指针。通过构造函数创建实例后，每个实例内部都有一个指针指向函数的prototype对象</strong>。Firefox，safari，Chrome中这个指针是<strong>proto</strong>，可以通过脚本访问。但是在IE中这个属性是不可见的，所以无法在IE中修改<strong>proto</strong>。同时，这个属性的关联关系是在实例与构造函数的prototope对象之间，而不是实例跟构造函数之间。</p>
-        
-          <a class="article-more-a" href="/2017/11/10/2017-11-11/Javascript原型链/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/10/2017-11-11/Javascript原型链/">展开全文 >></a>
         </p>
       
 
@@ -540,19 +624,19 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-2017-11-11/IE error： object doesn&#39;t support this action" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2017-11-11/Javascript原型链" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/10/2017-11-11/IE error： object doesn't support this action/">IE error： object doesn&#39;t support this action</a>
+      <a class="article-title" href="/2017/11/10/2017-11-11/Javascript原型链/">Javascript原型链</a>
     </h1>
   
 
         
-        <a href="/2017/11/10/2017-11-11/IE error： object doesn't support this action/" class="archive-article-date">
+        <a href="/2017/11/10/2017-11-11/Javascript原型链/" class="archive-article-date">
   	<time datetime="2017-11-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
 </a>
         
@@ -560,12 +644,10 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>​    IE总是有各种稀奇古怪的错误，IE8之后还好点，至少可以dubug。IE6 IE7就是灾难，报错就算了，所谓的error line总是指向莫名奇妙的地方，让人一头雾水。最近在IE7上碰到一个error：“Object doesn’t support this action”，指向的error line竟然是空行，而代码在其他浏览器没有问题。</p>
-<p>​      仔细检查，发现下面这行代码出错了：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>, length = currencyMap.length; i &lt; length; i++)</span><br></pre></td></tr></table></figure>
-<p>发现没有用var定义变量，先加上：</p>
+        <h2 id="原型链的关系"><a href="#原型链的关系" class="headerlink" title="原型链的关系"></a>原型链的关系</h2><p>在Javascript中，只要创建了一个新函数，就会为该函数创建prototype属性，指向函数的原型对象，<strong>Object.prototype是所有对象最顶层的原型</strong>。所有对象都继承由Object构造函数创建的原型对象，也就是说，所有的原型对象都继承Object.prototype的属性，而这个原型对象默认有一个constructor属性指向Object构造方法的原型。</p>
+<p><strong>默认所有原型对象都会有constructor属性，这个属性包含一个指向prototype属性所在函数的指针。通过构造函数创建实例后，每个实例内部都有一个指针指向函数的prototype对象</strong>。Firefox，safari，Chrome中这个指针是<strong>proto</strong>，可以通过脚本访问。但是在IE中这个属性是不可见的，所以无法在IE中修改<strong>proto</strong>。同时，这个属性的关联关系是在实例与构造函数的prototope对象之间，而不是实例跟构造函数之间。</p>
         
-          <a class="article-more-a" href="/2017/11/10/2017-11-11/IE error： object doesn't support this action/#more">more >></a>
+          <a class="article-more-a" href="/2017/11/10/2017-11-11/Javascript原型链/#more">more >></a>
         
       
 
@@ -579,10 +661,6 @@ ga('send', 'pageview');
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">IE</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
         		</li>
       		
@@ -593,7 +671,7 @@ ga('send', 'pageview');
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/10/2017-11-11/IE error： object doesn't support this action/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/11/10/2017-11-11/Javascript原型链/">展开全文 >></a>
         </p>
       
 
@@ -896,11 +974,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">IE</a>
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+                <a href="javascript:void(0)" class="js-tag color3">IE</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -908,7 +986,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">SublimeText</a>
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Prototype</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -920,19 +1006,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">cache</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">SublimeText</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Prototype</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -953,14 +1039,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">export</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">cache</a>
               </li>
             
             <div class="clearfix"></div>
