@@ -6,20 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://kingzhang.github.io">
-  <title>Javascript this 解析 | 水煮前端</title>
+  <title>Javascript数组方法对比 | 水煮前端</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Javascript中，this是一个非常有用的关键字, this是在运行时基于函数的运行环境绑定的，但是，如果使用的时候不注意，很容易就出错了。 ECMAScript Standard对this的定义看起来非常简单： The this keyword evaluates to the value of the ThisBinding of the current execution contex">
-<meta name="keywords" content="Javascript">
+  <meta name="description" content="JavaScript 中对数组的操作有几十个方法，在实际的应用中，要注意方法对原数组的影响及方法的返回值。有的方法是直接在原数组上进行修改，有的则是返回一个新数组。针对数组方法，可以分成三种类型：  修改器方法（Mutator）： 会修改数组本身 访问器方法（Accessor）：不会修改数组本身 迭代器方法（Iterator）">
+<meta name="keywords" content="Javascript,Array">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript this 解析">
-<meta property="og:url" content="https://kingzhang.github.io/2017/11/10/2017-11-11/Javascript this 解析/index.html">
+<meta property="og:title" content="Javascript数组方法对比">
+<meta property="og:url" content="https://kingzhang.github.io/2018/07/02/2018-07-02/Javascript数组方法对比/index.html">
 <meta property="og:site_name" content="水煮前端">
-<meta property="og:description" content="Javascript中，this是一个非常有用的关键字, this是在运行时基于函数的运行环境绑定的，但是，如果使用的时候不注意，很容易就出错了。 ECMAScript Standard对this的定义看起来非常简单： The this keyword evaluates to the value of the ThisBinding of the current execution contex">
+<meta property="og:description" content="JavaScript 中对数组的操作有几十个方法，在实际的应用中，要注意方法对原数组的影响及方法的返回值。有的方法是直接在原数组上进行修改，有的则是返回一个新数组。针对数组方法，可以分成三种类型：  修改器方法（Mutator）： 会修改数组本身 访问器方法（Accessor）：不会修改数组本身 迭代器方法（Iterator）">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-04T15:23:46.629Z">
+<meta property="og:image" content="https://kingzhang.github.io/2018/07/02/2018-07-02/Javascript数组方法对比/修改器方法.png">
+<meta property="og:image" content="https://kingzhang.github.io/2018/07/02/2018-07-02/Javascript数组方法对比/访问器方法.png">
+<meta property="og:image" content="https://kingzhang.github.io/2018/07/02/2018-07-02/Javascript数组方法对比/迭代器方法.png">
+<meta property="og:updated_time" content="2018-07-04T14:45:32.055Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascript this 解析">
-<meta name="twitter:description" content="Javascript中，this是一个非常有用的关键字, this是在运行时基于函数的运行环境绑定的，但是，如果使用的时候不注意，很容易就出错了。 ECMAScript Standard对this的定义看起来非常简单： The this keyword evaluates to the value of the ThisBinding of the current execution contex">
+<meta name="twitter:title" content="Javascript数组方法对比">
+<meta name="twitter:description" content="JavaScript 中对数组的操作有几十个方法，在实际的应用中，要注意方法对原数组的影响及方法的返回值。有的方法是直接在原数组上进行修改，有的则是返回一个新数组。针对数组方法，可以分成三种类型：  修改器方法（Mutator）： 会修改数组本身 访问器方法（Accessor）：不会修改数组本身 迭代器方法（Iterator）">
+<meta name="twitter:image" content="https://kingzhang.github.io/2018/07/02/2018-07-02/Javascript数组方法对比/修改器方法.png">
   
     <link rel="alternative" href="/atom.xml" title="水煮前端" type="application/atom+xml">
   
@@ -148,113 +152,36 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2017-11-11/Javascript this 解析" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2018-07-02/Javascript数组方法对比" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Javascript this 解析
+      Javascript数组方法对比
     </h1>
   
 
         
-        <a href="/2017/11/10/2017-11-11/Javascript this 解析/" class="archive-article-date">
-  	<time datetime="2017-11-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
+        <a href="/2018/07/02/2018-07-02/Javascript数组方法对比/" class="archive-article-date">
+  	<time datetime="2018-07-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Javascript中，this是一个非常有用的关键字, this是在运行时基于函数的运行环境绑定的，但是，如果使用的时候不注意，很容易就出错了。</p>
-<p>ECMAScript Standard对this的定义看起来非常简单： The this keyword evaluates to the value of the <strong>ThisBinding</strong> of the current <strong>execution context</strong>.</p>
-<p>其中，对于ThisBinding和execution context, ECMAScript Standard 有另外的详细说明：</p>
+        <p>JavaScript 中对数组的操作有几十个方法，在实际的应用中，要注意方法对原数组的影响及方法的返回值。有的方法是直接在原数组上进行修改，有的则是返回一个新数组。针对数组方法，可以分成三种类型：</p>
+<ul>
+<li>修改器方法（Mutator）： 会修改数组本身</li>
+<li>访问器方法（Accessor）：不会修改数组本身</li>
+<li>迭代器方法（Iterator）</li>
+</ul>
 <a id="more"></a>
-<h2 id="执行环境-引用http-ecmascript-cn"><a href="#执行环境-引用http-ecmascript-cn" class="headerlink" title="执行环境(引用http://ecmascript.cn/)"></a>执行环境(引用<a href="http://ecmascript.cn/" target="_blank" rel="noopener">http://ecmascript.cn/</a>)</h2><p>当控制器转入 ECMA 脚本的可执行代码时，控制器会进入一个执行环境。<strong>当前活动的多个执行环境在逻辑上形成一个栈结构。</strong>该逻辑栈的最顶层的执行环境称为当前运行的执行环境。<strong>任何时候，当控制器从当前运行的执行环境相关的可执行代码转入与该执行环境无关的可执行代码时，会创建一个新的执行环境。新建的这个执行环境会推入栈中，成为当前运行的执行环境。</strong></p>
-<p>执行环境包含所有用于追踪与其相关的代码的执行进度的状态。精确地说，每个执行环境包含如下表列出的组件。</p>
-<p>执行环境的状态组件</p>
-<table>
-<thead>
-<tr>
-<th><strong>组件</strong></th>
-<th><strong>作用目的</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>词法环境</td>
-<td>指定一个词法环境对象，用于解析该执行环境内的代码创建的标识符引用。</td>
-</tr>
-<tr>
-<td>变量环境</td>
-<td>指定一个词法环境对象，其环境数据用于保存由该执行环境内的代码通过 变量表达式 和 函数表达式 创建的绑定。</td>
-</tr>
-<tr>
-<td>ThisBinding</td>
-<td>指定该执行环境内的 ECMA 脚本代码中 this 关键字所关联的值。</td>
-</tr>
-</tbody>
-</table>
-<p>其中执行环境的词法环境和变量环境组件始终为 词法环境 对象。当创建一个执行环境时，其词法环境组件和变量环境组件最初是同一个值。在该执行环境相关联的代码的执行过程中，变量环境组件永远不变，而词法环境组件有可能改变。</p>
-<p>在本标准中，通常情况下，只有正在运行的执行环境（执行环境栈里的最顶层对象）会被算法直接修改。**因此当遇到“词法环境”，“变量环境”和“ThisBinding”这三个术语时，指的是正在运行的执行环境的对应组件。</p>
-<p>执行环境是一个纯粹的标准机制，并不代表任何 ECMA 脚本实现的工件。在 ECMA 脚本程序中是不可能访问到执行环境的。</p>
-<h2 id="ThisBinding"><a href="#ThisBinding" class="headerlink" title="ThisBinding"></a>ThisBinding</h2><p>对于ThisBinding的指定，则分为几个情况，一般主要关注在函数中的绑定情况：</p>
-<ol>
-<li>初始化全局执行环境时，将 thisBinding设置为 全局对象。</li>
-<li>进入函数代码的执行环境时，控制流根据一个函数对象 F、调用者提供的<strong>thisArg</strong> 以及调用者提供的 argumentList，执行以下步骤：</li>
-</ol>
-<p>A．如果 函数代码 是 严格模式下的代码 ，设 ThisBinding为 thisArg。</p>
-<p>B. 否则如果 thisArg 是 null 或 undefined，则设 ThisBinding为 全局对象 。</p>
-<p>C. 否则如果 Type(thisArg) 的结果不为 Object，则设 tThisBinding为 ToObject(thisArg)。</p>
-<p>D．否则设 this 绑定为 thisArg。</p>
-<p>因此，最终决定ThisBinding的是调用者提供的 thisArg。那么，如何知道thisArg的值呢？这就要看函数的调用方式了。</p>
-<h2 id="通过call或者apply调用"><a href="#通过call或者apply调用" class="headerlink" title="通过call或者apply调用"></a>通过call或者apply调用</h2><p>通过call或者apply调用函数时，thisArg的值比较明显，为传入的第一个参数。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype.apply (thisArg, argArray)</span><br><span class="line"></span><br><span class="line"><span class="built_in">Function</span>.prototype.call (thisArg [ , arg1 [ , arg2, … ] ] )</span><br></pre></td></tr></table></figure>
-<p>如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123; &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a.apply(a); <span class="comment">// function a</span></span><br><span class="line"></span><br><span class="line">a.apply(b); <span class="comment">// function b</span></span><br></pre></td></tr></table></figure>
-<h2 id="作为对象方法调用"><a href="#作为对象方法调用" class="headerlink" title="作为对象方法调用"></a>作为对象方法调用</h2><p>当函数作为对象方法调用时，this指向对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">a.b = b;</span><br><span class="line"></span><br><span class="line">a.b(); <span class="comment">// object a</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="直接调用函数"><a href="#直接调用函数" class="headerlink" title="直接调用函数"></a>直接调用函数</h2><p>直接调用函数时，this为全局变量Window（thisArg为null）。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a(); <span class="comment">// Window</span></span><br></pre></td></tr></table></figure>
-<p>要注意，直接调用函数时，无论嵌套多少层，无论是在哪个对象里面调用，this始终指向Window。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">// Window</span></span><br><span class="line"></span><br><span class="line">    b(); <span class="comment">// Window</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">        c(); <span class="comment">// Window</span></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a();</span><br></pre></td></tr></table></figure>
-<p>再看另一个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;</span><br><span class="line"></span><br><span class="line">    b : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">// Object a</span></span><br><span class="line"></span><br><span class="line">        c(); <span class="comment">// Window</span></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        d(); <span class="comment">// Window</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">d</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a.b();</span><br></pre></td></tr></table></figure>
-<h2 id="作为构造函数调用"><a href="#作为构造函数调用" class="headerlink" title="作为构造函数调用"></a>作为构造函数调用</h2><p>当函数作为构造函数调用时，this指向新建的对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> A = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.c = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.d = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.c);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.d);</span><br><span class="line"></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> A(); <span class="comment">// A&#123;&#125;</span></span><br><span class="line"></span><br><span class="line">a.d = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">a.b(); <span class="comment">// A &#123;c: 1, b: function&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
-<p>以上几种便是基本函数调用方式了，后面的几种调用方式中，只要识别函数基于上面哪种方式调用，便可以辨别this对象。</p>
-<h2 id="作为回调函数调用"><a href="#作为回调函数调用" class="headerlink" title="作为回调函数调用"></a>作为回调函数调用</h2><p>当函数通过回调函数调用时，其调用方式可能会让人感到疑惑，先来看一个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;</span><br><span class="line"></span><br><span class="line">    b : b</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">setTimeout(b, <span class="number">500</span>); <span class="comment">// window</span></span><br><span class="line"></span><br><span class="line">setTimeout(a.b, <span class="number">1000</span>); <span class="comment">// window</span></span><br></pre></td></tr></table></figure>
-<p>第一处为this为window应该很好理解，因为看起来是直接调用函数，因此this指向window对象。但是第二处看起来似乎是作为对象的方法调用？事实上，回调函数往往是作为一个参数传入，无论它本身结构如何，最终它将赋给一个新的变量。因此，上面第二处如果写成这样应该更好理解：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = a.b;</span><br><span class="line"></span><br><span class="line">f();<span class="comment">// window</span></span><br><span class="line"></span><br><span class="line">setTimeout(f, <span class="number">1000</span>); <span class="comment">//window</span></span><br></pre></td></tr></table></figure>
-<p>另外一种回调函数的方式是用一个匿名函数：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    a.b(); <span class="comment">// Object a</span></span><br><span class="line"></span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="DOM节点相关的函数调用"><a href="#DOM节点相关的函数调用" class="headerlink" title="DOM节点相关的函数调用"></a>DOM节点相关的函数调用</h2><p>在HTML代码中直接使用onclick事件处理时，分为几种情况：</p>
-<ol>
-<li>直接在事件处理中使用this，则this指向当前元素。</li>
-<li>间接在事件处理中使用this，则this指向全局变量Window。</li>
-<li>通过方法调用间接使用this，则this取决于使用上面何种方法调用。</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"testBtn1"</span> <span class="attr">onclick</span>=<span class="string">"console.log(this);"</span> &gt;</span>testBtn1<span class="tag">&lt;/<span class="name">button</span>&gt;</span> <span class="comment">&lt;!-- testBtn1 --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"testBtn2"</span> <span class="attr">onclick</span>=<span class="string">"(function()&#123;console.log(this);&#125;)()"</span> &gt;</span>testBtn2<span class="tag">&lt;/<span class="name">button</span>&gt;</span> <span class="comment">&lt;!-- Window --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"testBtn3"</span> <span class="attr">onclick</span>=<span class="string">"b()"</span> &gt;</span>testBtn3<span class="tag">&lt;/<span class="name">button</span>&gt;</span> <span class="comment">&lt;!-- Window --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"testBtn4"</span> <span class="attr">onclick</span>=<span class="string">"a.b()"</span> &gt;</span>testBtn4<span class="tag">&lt;/<span class="name">button</span>&gt;</span> <span class="comment">&lt;!-- Object a --&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在Javascript代码中通过事件绑定DOM元素时，也分为几种情况：</p>
-<ol>
-<li>通过onclick、addEventListener等函数绑定事件，调用函数中的this指向当前DOM元素。</li>
-<li>IE中，通过attachEvent函数绑定事件时，调用函数中的this指向全局对象Window。</li>
-<li>大部分Javascript框架都对事件绑定进行了封装，以兼容IE与其他浏览器的区别。</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"testBtn5"</span> &gt;</span>testBtn5<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"testBtn6"</span> &gt;</span>testBtn6<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"testBtn7"</span> &gt;</span>testBtn7(except IE)<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"testBtn8"</span> &gt;</span>testBtn8(Only for IE)<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"testBtn9"</span> &gt;</span>testBtn9(jQuery)<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;</span><br><span class="line"></span><br><span class="line">    b : b</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"testBtn5"</span>).onclick = b; <span class="comment">// testBtn5</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"testBtn6"</span>).onclick = a.b; <span class="comment">// testBtn6</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"testBtn7"</span>).addEventListener(<span class="string">"click"</span>, b, <span class="literal">false</span>); <span class="comment">// testBtn7</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"testBtn8"</span>).attachEvent(<span class="string">'onclick'</span>, b); <span class="comment">// Window</span></span><br><span class="line"></span><br><span class="line">jQuery(<span class="string">"#testBtn9"</span>).click(b); <span class="comment">// testBtn9</span></span><br></pre></td></tr></table></figure>
-<h2 id="闭包中的this"><a href="#闭包中的this" class="headerlink" title="闭包中的this"></a>闭包中的this</h2><p>由于this对象是在运行时基于函数的运行环境绑定的。在匿名函数中，其运行环境具有全局性，因此this对象通常指向window。然而，由于闭包的特殊性，这种差异可能在一定程度上引起意想不到的结果。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> student = &#123;</span><br><span class="line"></span><br><span class="line">    name : <span class="string">"Ken"</span>,</span><br><span class="line"></span><br><span class="line">    id : <span class="string">"2020"</span>,</span><br><span class="line"></span><br><span class="line">    getId : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(<span class="keyword">this</span>.id == <span class="string">"2020"</span>)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">this</span>.id = <span class="string">"1010"</span>;</span><br><span class="line"></span><br><span class="line">           &#125;</span><br><span class="line"></span><br><span class="line">           <span class="keyword">return</span> <span class="keyword">this</span>.id;</span><br><span class="line"></span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(student.getId()());<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
-<p>如上代码，getId()方法返回了一个匿名函数，匿名函数对this.id处理后并返回。但是由于调用student.getId()()的时候会立刻执行并调用它返回的匿名函数，而此时匿名函数的this对象指向window，因此无法取得其外部作用域的this对象。</p>
-<p>如果想要在闭包中访问到外部作用域的变量，可以将其外部作用域的this对象保存到一个闭包变量中。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> student = &#123;</span><br><span class="line"></span><br><span class="line">    name : <span class="string">"Ken"</span>,</span><br><span class="line"></span><br><span class="line">    id : <span class="string">"2020"</span>,</span><br><span class="line"></span><br><span class="line">    getId : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(that.id == <span class="string">"2020"</span>)&#123;</span><br><span class="line"></span><br><span class="line">                that.id = <span class="string">"1010"</span>;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> that.id;</span><br><span class="line"></span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(student.getId()());<span class="comment">//1010</span></span><br></pre></td></tr></table></figure>
-<h2 id="严格模式下的this"><a href="#严格模式下的this" class="headerlink" title="严格模式下的this"></a>严格模式下的this</h2><p>在ECMAScript的严格模式下，thisArg不会强制转化为一个对象。 因此this的值为null或undefined时不会转化为全局对象，并且基本类型的值不会转化为包装类型对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="meta">    "use strict"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">b(); <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
-<h2 id="ES6箭头函数中的this"><a href="#ES6箭头函数中的this" class="headerlink" title="ES6箭头函数中的this"></a>ES6箭头函数中的this</h2><p>箭头函数并没有绑定this，而是通过作用域链往上查找。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">	test: <span class="number">2</span>,</span><br><span class="line">	getTest() &#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    		<span class="built_in">console</span>.log(<span class="string">'test'</span>, <span class="keyword">this</span>.test)</span><br><span class="line">    	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getTest = obj.getTest();</span><br><span class="line">getTest(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<h2 id="修改器方法（Mutator）"><a href="#修改器方法（Mutator）" class="headerlink" title="修改器方法（Mutator）"></a>修改器方法（Mutator）</h2><p><img src="/2018/07/02/2018-07-02/Javascript数组方法对比/修改器方法.png" alt="Mutator"></p>
+<h2 id="访问器方法（Accessor）"><a href="#访问器方法（Accessor）" class="headerlink" title="访问器方法（Accessor）"></a>访问器方法（Accessor）</h2><p><img src="/2018/07/02/2018-07-02/Javascript数组方法对比/访问器方法.png" alt="Accessor"></p>
+<h2 id="迭代器方法（Iterator）"><a href="#迭代器方法（Iterator）" class="headerlink" title="迭代器方法（Iterator）"></a>迭代器方法（Iterator）</h2><p><img src="/2018/07/02/2018-07-02/Javascript数组方法对比/迭代器方法.png" alt="Iterator"></p>
 
       
 
@@ -269,6 +196,10 @@ ga('send', 'pageview');
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Array</a>
         		</li>
       		
 		</ul>
@@ -324,7 +255,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://kingzhang.github.io/2017/11/10/2017-11-11/Javascript this 解析/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://kingzhang.github.io/2018/07/02/2018-07-02/Javascript数组方法对比/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -338,18 +269,9 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2017/11/10/2017-11-11/Javascript闭包/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Javascript闭包
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/11/10/2017-11-11/Javascript原型链/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Javascript原型链</div>
+    <a href="/2018/05/17/2018-05-17/CSS 不同角度的阴影和圆角/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS 不同角度的阴影和圆角</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -376,7 +298,7 @@ ga('send', 'pageview');
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#执行环境-引用http-ecmascript-cn"><span class="toc-number">1.</span> <span class="toc-text">执行环境(引用http://ecmascript.cn/)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ThisBinding"><span class="toc-number">2.</span> <span class="toc-text">ThisBinding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过call或者apply调用"><span class="toc-number">3.</span> <span class="toc-text">通过call或者apply调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#作为对象方法调用"><span class="toc-number">4.</span> <span class="toc-text">作为对象方法调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#直接调用函数"><span class="toc-number">5.</span> <span class="toc-text">直接调用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#作为构造函数调用"><span class="toc-number">6.</span> <span class="toc-text">作为构造函数调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#作为回调函数调用"><span class="toc-number">7.</span> <span class="toc-text">作为回调函数调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM节点相关的函数调用"><span class="toc-number">8.</span> <span class="toc-text">DOM节点相关的函数调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#闭包中的this"><span class="toc-number">9.</span> <span class="toc-text">闭包中的this</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#严格模式下的this"><span class="toc-number">10.</span> <span class="toc-text">严格模式下的this</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ES6箭头函数中的this"><span class="toc-number">11.</span> <span class="toc-text">ES6箭头函数中的this</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改器方法（Mutator）"><span class="toc-number">1.</span> <span class="toc-text">修改器方法（Mutator）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问器方法（Accessor）"><span class="toc-number">2.</span> <span class="toc-text">访问器方法（Accessor）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#迭代器方法（Iterator）"><span class="toc-number">3.</span> <span class="toc-text">迭代器方法（Iterator）</span></a></li></ol>
                     </div>
                 </span>
             </div>
