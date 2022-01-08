@@ -1,5 +1,3 @@
-# 个人博客
+# 个人记录
 
-
-www.kingzhang.com
 
